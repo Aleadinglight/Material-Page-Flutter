@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:material_page/pages.dart';
 
 void main() => runApp(new MyApp());
 
@@ -54,42 +55,13 @@ class _MyHomePageState extends State<MyHomePage> {
     return new Scaffold(
       body: new Stack(
         children: [
-          new Container(
-            width: double.infinity,
-            color: Colors.blue,
-            child: new Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                new Padding(
-                  padding: new EdgeInsets.only(bottom: 25.0),
-                  child: new Image.asset(
-                    'assets/hotel.png',
-                    width: 200.0,
-                    height: 200.0,
-                  ),
-                ),
-                new Padding(
-                  padding: new EdgeInsets.only(top: 10.0, bottom: 10.0),
-                  child: new Text(
-                    'Hotels',
-                    style: new TextStyle(
-                      color: Colors.white,
-                      fontSize: 34.0,
-                    ),
-                  ),
-                ),
-                new Padding(
-                  padding: new EdgeInsets.only(bottom: 75.0),
-                  child: new Text(
-                    'This is the body',
-                    textAlign: TextAlign.center,
-                    style: new TextStyle(
-                      color: Colors.white,
-                      fontSize: 18.0,
-                    ),
-                  ),
-                ),
-              ],
+          new Page(
+            viewModel: new PageViewModel(
+              Colors.blue,
+              'asset/hotel.png',
+              'Hotel',
+              'This is the body',
+              null,
             ),
           ),
         ],
