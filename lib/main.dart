@@ -52,15 +52,36 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return new Scaffold(
-      appBar: new AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: new Text(widget.title),
-      ),
       body: new Stack(
         children: [
           new Container(
+            width: double.infinity,
             color: Colors.blue,
+            child: new Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                new Image.asset(
+                  'assets/hotel.png',
+                  width: 200.0,
+                  height: 200.0,
+                ),
+                new Text(
+                  'Hotels',
+                  style: new TextStyle(
+                    color: Colors.white,
+                    fontSize: 34.0,
+                  ),
+                ),
+                new Text(
+                  'This is the body',
+                  textAlign: TextAlign.center,
+                  style: new TextStyle(
+                    color: Colors.white,
+                    fontSize: 18.0,
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
