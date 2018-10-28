@@ -1,5 +1,29 @@
 import 'package:flutter/material.dart';
 
+final pages = [
+  new PageViewModel(
+    Colors.indigo[300],
+    'assets/hotel.png',
+    'Hotel',
+    'This is the body',
+    null,
+  ),
+  new PageViewModel(
+    Colors.deepPurple[300],
+    'assets/banks.png',
+    'Bank',
+    'This is the body',
+    null,
+  ),
+  new PageViewModel(
+    Colors.blueGrey[200],
+    'assets/stores.png',
+    'Store',
+    'This is the body',
+    null,
+  ),
+];
+
 class Page extends StatelessWidget {
   final PageViewModel viewModel;
 

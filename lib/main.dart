@@ -56,13 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: new Stack(
         children: [
           new Page(
-            viewModel: new PageViewModel(
-              Colors.blue,
-              'asset/hotel.png',
-              'Hotel',
-              'This is the body',
-              null,
-            ),
+            viewModel: pages[1],
           ),
         ],
       ),

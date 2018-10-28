@@ -33,6 +33,8 @@ flutter:
 
   assets:
     - assets/hotel.png
+    - assets/banks.png
+    - assets/stores.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
