@@ -40,15 +40,19 @@ class Page extends StatelessWidget {
       color: viewModel.color,
       child: new Opacity(
         opacity: percentVisible,
-        child: Column(
+        child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            new Padding(
-              padding: new EdgeInsets.only(bottom: 25.0),
-              child: new Image.asset(
-                viewModel.heroAssetPath,
-                width: 200.0,
-                height: 200.0,
+            new Transform(
+              transform: new Matrix4.translationValues(
+                  0.0, 50.0 * (1 - percentVisible), 0.0),
+              child: new Padding(
+                padding: new EdgeInsets.only(bottom: 25.0),
+                child: new Image.asset(
+                  viewModel.heroAssetPath,
+                  width: 200.0,
+                  height: 200.0,
+                ),
               ),
             ),
             new Padding(
