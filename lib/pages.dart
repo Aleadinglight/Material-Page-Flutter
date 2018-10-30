@@ -55,13 +55,17 @@ class Page extends StatelessWidget {
                 ),
               ),
             ),
-            new Padding(
-              padding: new EdgeInsets.only(top: 10.0, bottom: 10.0),
-              child: new Text(
-                viewModel.title,
-                style: new TextStyle(
-                  color: Colors.white,
-                  fontSize: 34.0,
+            new Transform(
+              transform: new Matrix4.translationValues(
+                  0.0, 30.0 * (1 - percentVisible), 0.0),
+              child: new Padding(
+                padding: new EdgeInsets.only(top: 10.0, bottom: 10.0),
+                child: new Text(
+                  viewModel.title,
+                  style: new TextStyle(
+                    color: Colors.white,
+                    fontSize: 34.0,
+                  ),
                 ),
               ),
             ),
