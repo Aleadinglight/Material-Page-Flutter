@@ -56,8 +56,12 @@ class _MyHomePageState extends State<MyHomePage> {
       body: new Stack(
         children: [
           new Page(
+            viewModel: pages[0],
+            percentVisible: 0.25,
+          ),
+          new Page(
             viewModel: pages[2],
-            percentVisible: 0.5,
+            percentVisible: 1.0,
           ),
         ],
       ),
